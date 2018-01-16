@@ -6,3 +6,9 @@
   
   We define an intermediate function p(k, n) which is defined as the number
   of partitions of n in which all addends are >= k.
+
+  This function can be defined recursively:
+
+                 / 0 (k > n)
+      p(k, n) = {  1 (k = n)
+                 \ p(k+1, n)+p(k, n-k) (k < n)
